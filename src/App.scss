@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 98.9vw;
+  text-align: center;
+  overflow: hidden;
+  & img {
+    width: 100%;
+  }
+}
