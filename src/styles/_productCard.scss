@@ -1,32 +1,35 @@
 .product-card {
   position: absolute;
+  background-color: white;
   z-index: 1;
   top: 63.5vw;
   left: 12.8vw;
   width: 13.2vw;
   height: 18.6vw;
-  background-color: aqua;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 2px lightgray;
-  & .product-card-content {
+  &__content {
     width: 11vw;
     height: 100%;
-    background-color: brown;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    & .product-img {
+    &__img {
       width: 9vw;
-      margin-bottom: 20px;
+      margin-bottom: 19px;
+      align-self: center;
     }
-    & .product-title {
+    &__title {
       font-weight: 600;
       font-size: 0.95rem;
       margin-bottom: 18px;
+    }
+    &__reviews-img {
+      width: 70%;
     }
   }
 }

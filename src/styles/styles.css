@@ -1,3 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.App {
+  width: 98.9vw;
+  text-align: center;
+  overflow: hidden;
+}
+
+.App .div-background {
+  width: 100%;
+}
+
+.App .div-background img {
+  width: 98.9vw;
+}
+
 .product-card {
   position: absolute;
   z-index: 1;
@@ -5,7 +26,6 @@
   left: 12.8vw;
   width: 13.2vw;
   height: 18.6vw;
-  background-color: aqua;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,7 +43,6 @@
 .product-card .product-card-content {
   width: 11vw;
   height: 100%;
-  background-color: brown;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,4 +68,4 @@
   font-size: 0.95rem;
   margin-bottom: 18px;
 }
-/*# sourceMappingURL=productCard.css.map */
+/*# sourceMappingURL=styles.css.map */
