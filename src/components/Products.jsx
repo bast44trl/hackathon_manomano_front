@@ -37,7 +37,7 @@ const Products = () => {
         <div className="products__drop-down__div">Account settings</div>
         <div className="products__drop-down__div">My orders</div>
         <Link
-          to={`/wishlist`}
+          to={`/wishlist-page`}
           style={{ textDecoration: "none", color: "#1e3c87" }}
         >
           <div className="products__drop-down__wish">My Wish Lists</div>
