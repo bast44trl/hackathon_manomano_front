@@ -59,7 +59,7 @@ const Products = () => {
       </div>
       <div className="products__item topSells">
         {products.length &&
-          products.slice(6, 10).map((product) => {
+          products.slice(5, 10).map((product) => {
             return (
               <ProductCard
                 id_product={product.id_product}
