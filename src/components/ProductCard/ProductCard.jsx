@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import productImg from '../../assets/productsImg/tronconneuseImg.jpg';
 import perceuseReviews from '../../assets/reviewsImg/perceuseReviews.png';
+import emptyHeart from '../../assets/PNG/emptyHeart.png';
+import redHeart from '../../assets/PNG/redHeart.png';
+/* import purchased from '../../assets/PNG/purchased.png'; */
+import { BsCheck2Circle } from 'react-icons/bs';
 
 const ProductCard = () => {
+    const [favoriteActive, setFavoriteActive] = useState(false);
+
     return (
         <div className='product-card'>
             <div className='product-card__content'>
@@ -19,8 +25,16 @@ const ProductCard = () => {
                         </div> */}
                     </div>
                     <div className='product-card__content__price-favorite__favorite-purchased'>
-                        <div className='product-card__content__price-favorite__favorite-purchased__favorite'></div>
-                        <div className='product-card__content__price-favorite__favorite-purchased__purchased'></div>
+                        <div className='product-card__content__price-favorite__favorite-purchased__favorite'>
+                            <img
+                            className='product-card__content__price-favorite__favorite-purchased__favorite__empty-heart favorite'
+                            src={emptyHeart}
+                            alt="empty heart"
+                            onClick={() => setFavoriteActive(!favoriteActive)} />
+                            <img className='product-card__content__price-favorite__favorite-purchased__favorite__red-heart' src={redHeart} alt="red heart" />
+                        </div>
+                        <div className='product-card__content__price-favorite__favorite-purchased__purchased'>
+                            <BsCheck2Circle className='product-card__content__price-favorite__favorite-purchased__purchased__icon' /></div>
                     </div>
                 </div>
             </div>
