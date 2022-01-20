@@ -1,6 +1,6 @@
 import React from "react";
-import wishlisthead from "../assets/backgrounds/wishlisthead.png";
-import wishlistfooter from "../assets/backgrounds/wishlistfooter.png";
+import wishlisthead from "../assets/backgrounds/header_ManoMano3.png";
+import wishlistfooter from "../assets/backgrounds/footer_ManoMano3.png";
 import Wishlist from "./Wishlist";
 import WishListTab from "./WishListTab";
 
@@ -14,7 +14,7 @@ const WishlistPage = () => {
           <WishListTab activate={false} />
           <h1>My favorites</h1>
         </div>
-        <Wishlist className="wishlistPage__container--left" />
+        <Wishlist className="wishlistPage__container--right" />
       </div>
       <img className="wishlistPage__img" src={wishlistfooter} alt="" />
     </div>

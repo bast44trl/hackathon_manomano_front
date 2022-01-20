@@ -5,7 +5,12 @@
 
   &__containerProduct {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: transparent;
+    flex-wrap: wrap;
+
+    & .product-card__content {
+      padding: 50px;
+    }
   }
 }
