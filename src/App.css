@@ -11,7 +11,11 @@
   overflow: hidden;
 }
 
-.App img {
+.App .div-background {
   width: 100%;
+}
+
+.App .div-background img {
+  width: 98.9vw;
 }
 /*# sourceMappingURL=App.css.map */
