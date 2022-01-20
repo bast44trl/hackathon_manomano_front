@@ -158,6 +158,13 @@
   color: #4aaea1;
 }
 
+.wishlist__link__icon {
+  font-size: 3rem;
+  color: red;
+  position: absolute;
+  top: 0;
+}
+
 .products {
   text-align: center;
   position: relative;

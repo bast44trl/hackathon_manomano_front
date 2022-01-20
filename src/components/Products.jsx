@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import backgroundLandingPage from "../assets/backgrounds/landing-page.png";
 import ProductCard from "./ProductCard";
 import axios from "axios";
+import { Link } from 'react-router-dom';
+import {AiFillExclamationCircle} from 'react-icons/ai';
+
 
 const Products = () => {
   const [products, setProducts] = useState();
@@ -33,6 +36,10 @@ const Products = () => {
         <ProductCard />
         <ProductCard />
       </div>
+      <Link to="/wishlist">
+      <div className="wishlist__link">
+        <AiFillExclamationCircle className="wishlist__link__icon"/>
+      </div></Link>
     </div>
   );
 };
