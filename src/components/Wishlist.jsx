@@ -4,7 +4,7 @@ import axios from "axios";
 import "../styles/_wishlist.scss";
 import ProductCard from "./ProductCard";
 
-const id_list = 2;
+const id_list = 3;
 
 const Wishlist = () => {
   const [favorites, setFavorites] = useState();
