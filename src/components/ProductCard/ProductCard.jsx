@@ -12,11 +12,11 @@ const ProductCard = () => {
                 <div className='product-card__content__price-favorite'>
                     <div className='product-card__content__price-favorite__price'>
                         <div className='product-card__content__price-favorite__price__number'>
-                            56
+                            £56
                         </div>
-                        <div className='product-card__content__price-favorite__price__euro'>
+                        {/* <div className='product-card__content__price-favorite__price__euro'>
                             €
-                        </div>
+                        </div> */}
                     </div>
                     <div className='product-card__content__price-favorite__favorite-purchased'>
                         <div className='product-card__content__price-favorite__favorite-purchased__favorite'></div>
