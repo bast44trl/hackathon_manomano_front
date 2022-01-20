@@ -1,15 +1,14 @@
 .product-card {
-  position: absolute;
-  top: 38.5vw;
-  left: 12.8vw;
   background-color: white;
   width: 13.3vw;
+
   height: 18.6vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 2px lightgray;
+  margin: 0 1%;
   &__content {
     width: 11vw;
     height: 100%;

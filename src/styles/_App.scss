@@ -5,13 +5,5 @@
 }
 
 .App {
-  width: 98.9vw;
   text-align: center;
-  overflow: hidden;
-  &__background {
-    width: 100%;
-    & img {
-      width: 98.9vw;
-    }
-  }
 }
