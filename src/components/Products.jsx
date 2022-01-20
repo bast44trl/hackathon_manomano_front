@@ -45,9 +45,10 @@ const Products = () => {
       </div>
       <div className="products__item recentlySeen">
         {products.length &&
-          products.map((product) => {
+          products.slice(0, 5).map((product) => {
             return (
               <ProductCard
+                id_product={product.id_product}
                 key={product.id_product}
                 image={require("../assets/productsImg/" + product.picture)}
                 title={product.title}
@@ -57,11 +58,18 @@ const Products = () => {
           })}
       </div>
       <div className="products__item topSells">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {products.length &&
+          products.slice(6, 10).map((product) => {
+            return (
+              <ProductCard
+                id_product={product.id_product}
+                key={product.id_product}
+                image={require("../assets/productsImg/" + product.picture)}
+                title={product.title}
+                price={product.price}
+              />
+            );
+          })}
       </div>
     </div>
   );
