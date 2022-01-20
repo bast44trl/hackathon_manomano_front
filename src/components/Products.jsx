@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import backgroundLandingPage from "../../assets/backgrounds/landing-page.png";
-import ProductCard from "../ProductCard/ProductCard";
+import backgroundLandingPage from "../assets/backgrounds/landing-page.png";
+import ProductCard from "./ProductCard";
 import axios from "axios";
 
 const Products = () => {

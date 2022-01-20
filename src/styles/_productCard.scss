@@ -75,6 +75,7 @@
             display: none;
           }
           &:hover {
+            cursor: pointer;
             &
               .product-card__content__price-favorite__favorite-purchased__favorite__empty-heart {
               display: none;

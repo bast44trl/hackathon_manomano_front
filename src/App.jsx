@@ -1,4 +1,4 @@
-import Products from "./components/Products/Products";
+import Products from "./components/Products";
 import "./styles/_App.scss";
 
 function App() {
