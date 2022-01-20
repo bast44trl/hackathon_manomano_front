@@ -7,14 +7,13 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [dropDown, setDropDown] = useState(false);
-  products.length && console.log(products);
   useEffect(() => {
     axios
       .get(`http://localhost:8000/api/products`)
       .then((rep) => rep.data)
       .then((data) => setProducts(data));
   }, []);
-  console.log(dropDown);
+  console.log(products);
   return (
     <div className="products">
       <img
@@ -36,7 +35,12 @@ const Products = () => {
         <div className="products__drop-down__div">My Profile</div>
         <div className="products__drop-down__div">Account settings</div>
         <div className="products__drop-down__div">My orders</div>
-        <div className="products__drop-down__wish">My Wish Lists</div>
+        <Link
+          to={`/wishlist`}
+          style={{ textDecoration: "none", color: "#1e3c87" }}
+        >
+          <div className="products__drop-down__wish">My Wish Lists</div>
+        </Link>
         <div className="products__drop-down__log-out">Log Out</div>
       </div>
       <div className="products__item recentlySeen">
