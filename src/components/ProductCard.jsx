@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import productImg from '../../assets/productsImg/tronconneuseImg.jpg';
-import perceuseReviews from '../../assets/reviewsImg/perceuseReviews.png';
-import emptyHeart from '../../assets/PNG/emptyHeart.png';
-import redHeart from '../../assets/PNG/redHeart.png';
-/* import purchased from '../../assets/PNG/purchased.png'; */
+import productImg from '../assets/productsImg/tronconneuseImg.jpg';
+import perceuseReviews from '../assets/reviewsImg/perceuseReviews.png';
+import emptyHeart from '../assets/PNG/emptyHeart.png';
+import redHeart from '../assets/PNG/redHeart.png';
+/* import purchased from '../assets/PNG/purchased.png'; */
 import { BsCheck2Circle } from 'react-icons/bs';
 
 const ProductCard = () => {
@@ -26,12 +26,20 @@ const ProductCard = () => {
                     </div>
                     <div className='product-card__content__price-favorite__favorite-purchased'>
                         <div className='product-card__content__price-favorite__favorite-purchased__favorite'>
-                            <img
-                            className='product-card__content__price-favorite__favorite-purchased__favorite__empty-heart favorite'
-                            src={emptyHeart}
-                            alt="empty heart"
-                            onClick={() => setFavoriteActive(!favoriteActive)} />
-                            <img className='product-card__content__price-favorite__favorite-purchased__favorite__red-heart' src={redHeart} alt="red heart" />
+                        {!favoriteActive && (<img
+                                className='product-card__content__price-favorite__favorite-purchased__favorite__empty-heart favorite'
+                                src={emptyHeart}
+                                alt="empty heart" />)}
+                            {!favoriteActive && (<img
+                                className='product-card__content__price-favorite__favorite-purchased__favorite__red-heart'
+                                src={redHeart}
+                                alt="red heart"
+                                onClick={() => setFavoriteActive(!favoriteActive)} />)}
+                            {favoriteActive && (<img
+                                className='product-card__content__price-favorite__favorite-purchased__favorite__red-heart-still'
+                                src={redHeart}
+                                alt="red heart"
+                                onClick={() => setFavoriteActive(!favoriteActive)} />)}
                         </div>
                         <div className='product-card__content__price-favorite__favorite-purchased__purchased'>
                             <BsCheck2Circle className='product-card__content__price-favorite__favorite-purchased__purchased__icon' /></div>
