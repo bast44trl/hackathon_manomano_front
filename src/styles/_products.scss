@@ -1,17 +1,60 @@
-.wishlist__link__icon{
-  font-size: 3rem;
-  color: red;
-  position: absolute;
-  top: 0;
-}
-
 .products {
-
   text-align: center;
   position: relative;
 
   &__background {
     width: 100%;
+  }
+
+  &__transparent {
+    position: absolute;
+    top: 1.5vh;
+    right: 8vw;
+    width: 8vw;
+    height: 7vh;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__drop-down-active {
+    position: absolute;
+    top: 8.5vh;
+    right: 6vw;
+    width: 10vw;
+    height: 20vh;
+    background-color: white;
+    border-radius: 10px;
+    color: #1e3c87;
+  }
+  &__drop-down-inactive {
+    display: none;
+  }
+  &__drop-down__div {
+    text-align: left;
+    padding: 0.5vh 0.8vw;
+    cursor: pointer;
+  }
+  &__drop-down__div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &__drop-down__wish {
+    text-align: left;
+    border-bottom: 2px solid #1e3c87;
+    padding: 1vh 0.8vw;
+    cursor: pointer;
+  }
+  &__drop-down__wish:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__drop-down__log-out {
+    padding-top: 1vh;
+    cursor: pointer;
+  }
+  &__drop-down__log-out:hover {
+    text-decoration: underline;
+    cursor: pointer;
   }
 
   &__item {
@@ -24,7 +67,7 @@
     background-color: transparent;
 
     &.recentlySeen {
-      top: 12.2%;
+      top: 12.25%;
     }
 
     &.topSells {

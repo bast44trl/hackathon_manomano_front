@@ -1,3 +1,14 @@
 .wishlist {
+<<<<<<< HEAD
     background-color: #fafafa
+=======
+width: 100%;
+        background: red;
+
+    &__containerProduct{
+        display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    }
+>>>>>>> c65840e457bdc330938c08fc092a28b4b070e37e
 }
