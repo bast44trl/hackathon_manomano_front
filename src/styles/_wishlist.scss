@@ -1,0 +1,10 @@
+.wishlist {
+width: 100%;
+        background: red;
+
+    &__containerProduct{
+        display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    }
+}
