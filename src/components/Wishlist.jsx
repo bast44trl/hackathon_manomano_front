@@ -7,22 +7,13 @@ import HorizontalCard from "./HorizontalCard";
 const Wishlist = ({ toDisplay }) => {
   const [favorites, setFavorites] = useState([]);
   const [isActive, setIsActive] = useState(false);
-  let productList = [];
 
   useEffect(() => {
     axios
       .get(`http://localhost:8000/api/lists_products/${toDisplay}`)
-      .then((res) => {
-        res.data.map((product) => {
-          return axios
-            .get(`http://localhost:8000/api/products/${product.id_product}`)
-            .then((res) => {
-              productList.push(res.data);
-              setFavorites((favorites) => [...productList]);
-            });
-        });
-      });
-  }, [isActive, toDisplay]);
+      .then((res) => res.data)
+      .then((data) => setFavorites(data));
+  }, [isActive, toDisplay, favorites]);
   console.log(favorites);
 
   return (
