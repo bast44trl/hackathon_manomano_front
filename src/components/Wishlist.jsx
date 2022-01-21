@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // import wishlist from "../assets/backgrounds/wishlist.png";
 import "../styles/_wishlist.scss";
-import ProductCard from "./ProductCard";
+import HorizontalCard from "./HorizontalCard";
 
 
 
@@ -31,7 +31,7 @@ const Wishlist = ({toDisplay}) => {
       <div className="wishlist__containerProduct">
         {favorites &&
           favorites.map((product) => (
-            <ProductCard
+            <HorizontalCard
               key={product.id_product}
               image={require("../assets/productsImg/" + product.picture)}
               title={product.title}
