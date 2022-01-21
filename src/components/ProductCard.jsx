@@ -131,7 +131,7 @@ const ProductCard = ({ title, image, price, id_product }) => {
                       onChange={(e) => setListName(e.target.value)}
                       placeholder="Please enter a list name">
                       </input>
-                      <button onClick={(e) => handleCreateList(e)}>👌</button></form>)}
+                      <button className="ok-button" onClick={(e) => handleCreateList(e)}>👌</button></form>)}
                   </li>
                   {wishlists && wishlists.map((list, index) =>
                   (<li

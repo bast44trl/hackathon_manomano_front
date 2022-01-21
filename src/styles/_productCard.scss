@@ -40,6 +40,18 @@
         }
         & .input-create {
           border-radius: 8px;
+          width: 80%;
+          padding: 0.1rem 0.3rem;
+          font-size: 0.8rem;
+          margin-right: 4px;
+        }
+        & .ok-button {
+          width: 1.5vw;
+          border-radius: 1.5vw;
+          padding-bottom: 2px;
+          &:hover {
+            cursor: pointer;
+          }
         }
         &__button {
           width: 80%;
