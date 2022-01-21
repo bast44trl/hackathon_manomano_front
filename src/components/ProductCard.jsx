@@ -111,9 +111,9 @@ const ProductCard = ({ title, image, price, id_product }) => {
                       alt="red heart"
                       onClick={() => setFavoriteActive(!favoriteActive)} />)}
               </div>
-              <div className='extend__product-card__content__price-favorite__favorite-purchased__purchased'>
+              {title.includes('Drill') || title.includes('Chainsaw') ? <div className='extend__product-card__content__price-favorite__favorite-purchased__purchased'>
                   <BsCheck2Circle className='extend__product-card__content__price-favorite__favorite-purchased__purchased__icon' />
-              </div>
+              </div> : ""}
             </div>
           </div>
         </div>

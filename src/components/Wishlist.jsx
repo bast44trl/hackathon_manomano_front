@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import wishlist from "../assets/backgrounds/wishlist.png";
-import "../styles/_wishlist.scss";
-import HorizontalCard from "./HorizontalCard";
+import HorizontalCard from './HorizontalCard';
 
 const Wishlist = ({ toDisplay }) => {
   const [favorites, setFavorites] = useState([]);
@@ -13,8 +11,7 @@ const Wishlist = ({ toDisplay }) => {
       .get(`http://localhost:8000/api/lists_products/${toDisplay}`)
       .then((res) => res.data)
       .then((data) => setFavorites(data));
-  }, [isActive, toDisplay, favorites]);
-  console.log(favorites);
+  }, [isActive, toDisplay]);
 
   return (
     <div className="wishlist">
