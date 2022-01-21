@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import axios from 'axios';
 import productReviews from "../assets/reviewsImg/perceuseReviews.png";
 import emptyHeart from "../assets/PNG/emptyHeart.png";
@@ -12,6 +12,24 @@ const ProductCard = ({ title, image, price, id_product }) => {
   const [wishlists, setWishlists] = useState([]);
   const [createList, setCreateList] = useState(false);
   const [listName, setListName] = useState("");
+  const ref = useRef()
+
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (wishlistSelect && ref.current && !ref.current.contains(e.target)) {
+        setWishlistSelect(false)
+      }
+    }
+
+    document.addEventListener("mousedown", checkIfClickedOutside)
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [wishlistSelect])
 
   const handleAddProduct = (idList) => {
     axios.post(`http://localhost:8000/api/lists_products`, {id_product: id_product, id_list: idList}, {
@@ -86,7 +104,7 @@ const ProductCard = ({ title, image, price, id_product }) => {
                       className='extend__product-card__content__price-favorite__favorite-purchased__favorite__red-heart'
                       src={redHeart}
                       alt="red heart"
-                      onClick={() => {setWishlistSelect(!wishlistSelect); setCreateList(false)}/* setFavoriteActive(!favoriteActive) */} />)}
+                      onClick={() => {setWishlistSelect(!wishlistSelect); setCreateList(false)}} />)}
                   {favoriteActive && (<img
                       className='extend__product-card__content__price-favorite__favorite-purchased__favorite__red-heart-still'
                       src={redHeart}
@@ -100,7 +118,7 @@ const ProductCard = ({ title, image, price, id_product }) => {
           </div>
         </div>
       </div>
-      {wishlistSelect && (<div className="extend__list-div">
+      {wishlistSelect && (<div className="extend__list-div" ref={ref}>
                 <ul className="extend__list-div__ul">
                   <li className="extend__list-div__ul__create-li">
                     {!createList ? (<button 
