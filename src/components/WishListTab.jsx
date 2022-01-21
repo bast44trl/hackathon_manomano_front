@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const WishListTab = ({ activate }) => {
+const WishListTab = ({ activate, name, id, setTodisplay }) => {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
@@ -11,9 +11,11 @@ const WishListTab = ({ activate }) => {
     <div
       className={active ? "wishlisttab active" : "wishlisttab"}
       onClick={() => {
-        setActive(!active);
+        setActive(!active); setTodisplay(id) ;
       }}
-    ></div>
+    >
+      {name}
+    </div>
   );
 };
 

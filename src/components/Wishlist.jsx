@@ -4,15 +4,15 @@ import axios from "axios";
 import "../styles/_wishlist.scss";
 import ProductCard from "./ProductCard";
 
-const id_list = 10;
 
-const Wishlist = () => {
+
+const Wishlist = ({toDisplay}) => {
   const [favorites, setFavorites] = useState();
   let productList = [];
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/lists_products/${id_list}`)
+      .get(`http://localhost:8000/api/lists_products/${toDisplay}`)
       .then((res) => {
         res.data.map((product) => {
           axios
@@ -23,7 +23,7 @@ const Wishlist = () => {
             });
         });
       });
-  }, []);
+  }, [toDisplay]);
   console.log(favorites);
 
   return (
