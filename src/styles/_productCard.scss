@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  margin: 0 0.65vw;
   &__list-div {
     position: absolute;
     z-index: 2;
@@ -18,7 +19,7 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 5px $main-text-color;
     border-radius: 5px;
     background-color: white;
     &__ul {
@@ -36,7 +37,7 @@
         margin-bottom: 5px;
         &__button {
           border-color: #29b9ad;
-          color: #0c193a;
+          color: $main-text-color;
         }
         & .input-create {
           border-radius: 8px;
@@ -67,10 +68,24 @@
       }
       &__list-li {
         font-size: 0.9rem;
+        font-family: $main-font-family;
+        color: $main-text-color;
         margin-bottom: -2px;
         &:hover {
           text-decoration: underline;
           cursor: pointer;
+        }
+        &__mywishlists {
+          font-weight: bold;
+          color: $logo-color;
+          text-decoration: underline;
+        }
+        &__no-list {
+          font-family: $main-font-family;
+          color: $main-text-color;
+          margin-bottom: -2px;
+          font-size: 0.7rem;
+          margin: 0.5vw 0;
         }
       }
     }
@@ -84,7 +99,6 @@
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 2px lightgray;
-    margin: 0 1%;
     &__content {
       width: 11vw;
       height: 100%;
@@ -94,17 +108,17 @@
       align-items: flex-start;
       &__img {
         width: 9vw;
-        margin: 10px 0;
+        margin: 1vw 0;
         align-self: center;
       }
       &__title {
-        height: 40px;
-        line-height: 18.3333333333px;
-        font-size: 14px;
+        height: 2.3vw;
+        line-height: 1.1vw;
+        font-size: 1vw;
         font-weight: 600;
         font-family: $main-font-family;
         text-align: left;
-        color: #0c193a;
+        color: $main-text-color;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
@@ -113,37 +127,31 @@
       }
       &__reviews-img {
         width: 70%;
-        margin-left: -5px;
-        margin-bottom: 5px;
+        margin-left: -0.1vw;
+        margin-bottom: 0.1vw;
       }
       &__price-favorite {
         display: flex;
         justify-content: space-between;
-        height: 30px;
+        height: 3vw;
         width: 100%;
         overflow: hidden;
         &__price {
-          display: flex;
-          justify-content: flex-start;
           font-weight: bold;
-          color: #0c193a;
-          font-size: 1.5rem;
+          color: $main-text-color;
+          font-size: 2.2vw;
           height: 100%;
-          &__euro {
-            line-height: 28px;
-            font-size: 0.9rem;
-          }
         }
         &__favorite-purchased {
-          width: 55px;
-          height: 25px;
-          margin-top: 5px;
+          width: 5vw;
+          height: 100%;
           display: flex;
           flex-direction: row-reverse;
           justify-content: space-between;
+          align-items: center;
           &__favorite {
-            width: 25px;
-            height: 100%;
+            width: 2vw;
+            height: 70%;
             & img {
               width: 100%;
             }
@@ -163,11 +171,11 @@
             }
           }
           &__purchased {
-            width: 25px;
-            height: 100%;
+            width: 3vw;
+            height: 70%;
             &__icon {
               width: 100%;
-              font-size: 1.5rem;
+              font-size: 2vw;
               color: #4aaea1;
             }
           }

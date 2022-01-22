@@ -53,7 +53,7 @@ const ProductCard = ({ title, image, price, id_product }) => {
       withCredentials: false,
     })
     .then((res) => res.data)
-    .catch((err) => console.log(err));
+    .catch((err) => console.log(err.message));
     setCreateList(false);
   }
 
@@ -112,7 +112,7 @@ const ProductCard = ({ title, image, price, id_product }) => {
                       onClick={() => setFavoriteActive(!favoriteActive)} />)}
               </div>
               {title.includes('Drill') || title.includes('Chainsaw') ? <div className='extend__product-card__content__price-favorite__favorite-purchased__purchased'>
-                  <BsCheck2Circle className='extend__product-card__content__price-favorite__favorite-purchased__purchased__icon' />
+                  <BsCheck2Circle className='extend__product-card__content__price-favorite__favorite-purchased__purchased__icon' title="You have already purchased this item" />
               </div> : ""}
             </div>
           </div>
@@ -133,6 +133,7 @@ const ProductCard = ({ title, image, price, id_product }) => {
                       </input>
                       <button className="ok-button" onClick={(e) => handleCreateList(e)}>👌</button></form>)}
                   </li>
+                  {wishlists.length ? <li className="extend__list-div__ul__list-li__mywishlists"><p>{`My wishlist${wishlists.length > 1 ? "s" : ""}`}</p></li> : <li className="extend__list-div__ul__list-li__no-list">You don't have any wishlist yet</li>}
                   {wishlists && wishlists.map((list, index) =>
                   (<li
                   key={index}

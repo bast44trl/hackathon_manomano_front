@@ -1,12 +1,12 @@
 .wishlist {
-  background-color: white;
+  background-color: $bg-color;
   width: 60%;
   //   width: 100%;
 
   &__containerProduct {
     display: flex;
     justify-content: space-around;
-    background-color: #fafafa;
+    background-color: $bg-color;
     flex-wrap: wrap;
     margin-bottom: 2vw;
     & .product-card__content {

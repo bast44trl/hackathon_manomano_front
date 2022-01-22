@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import wishlist from "../assets/backgrounds/wishlist.png";
-import "../styles/_wishlist.scss";
 import HorizontalCard from './HorizontalCard';
 
 const Wishlist = ({ toDisplay }) => {
@@ -15,7 +13,6 @@ const Wishlist = ({ toDisplay }) => {
       .then((res) => res.data)
       .then((data) => setFavorites(data));
   }, [toDisplay, isActive]);
-  console.log(favorites);
 
   useEffect(() => {
     axios
@@ -23,7 +20,6 @@ const Wishlist = ({ toDisplay }) => {
       .then((res) => res.data)
       .then((data) => {setFavorites(data); setDeleteOk(false)});
   }, [deleteOk]);
-  console.log(favorites);
 
   return (
     <div className="wishlist">
