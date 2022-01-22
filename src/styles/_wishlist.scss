@@ -1,16 +1,14 @@
 .wishlist {
-  background-color: $bg-color;
   width: 60%;
-  //   width: 100%;
+  display: flex;
+  align-items: center;
 
   &__containerProduct {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: $bg-color;
     flex-wrap: wrap;
     margin-bottom: 2vw;
-    & .product-card__content {
-      margin: 50px 50px !important;
-    }
   }
 }
