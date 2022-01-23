@@ -8,13 +8,22 @@ import axios from "axios";
 const WishlistPage = () => {
   const [lists, setLists] = useState([]);
   const [toDisplay, setToDisplay] = useState();
+  const [refreshList, setRefreshList] = useState(false);
+  const [listDeleted, setListDeleted] = useState(false);
 
   useEffect(() => {
     axios
       .get("https://manomano-hackathon.herokuapp.com/api/lists")
       .then((res) => res.data)
       .then((data) => setLists(data));
-  }, []);
+  }, [refreshList]);
+
+  useEffect(() => {
+    axios
+      .get("https://manomano-hackathon.herokuapp.com/api/lists")
+      .then((res) => res.data)
+      .then((data) => {setLists(data); setListDeleted(false)});
+  }, [listDeleted]);
   
   return (
     <div className="wishlistPage">
@@ -31,6 +40,8 @@ const WishlistPage = () => {
                   activate={el.id_list === 1 ? true : false}
                   setTodisplay={setToDisplay}
                   id={el.id_list}
+                  setListDeleted={setListDeleted}
+                  setRefreshList={setRefreshList}
                 />
               );
             })}

@@ -12,6 +12,9 @@ const ProductCard = ({ title, image, price, id_product }) => {
   const [wishlists, setWishlists] = useState([]);
   const [createList, setCreateList] = useState(false);
   const [listName, setListName] = useState("");
+  const [createdList, setCreatedList]= useState(false);
+  const [refreshList, setRefreshList]= useState(false);
+  
   const ref = useRef()
 
   useEffect(() => {
@@ -32,7 +35,7 @@ const ProductCard = ({ title, image, price, id_product }) => {
   }, [wishlistSelect])
 
   const handleAddProduct = (idList) => {
-    axios.post(`http://localhost:8000/api/lists_products`, {id_product: id_product, id_list: idList}, {
+    axios.post(`https://manomano-hackathon.herokuapp.com/api/lists_products`, {id_product: id_product, id_list: idList}, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -55,6 +58,8 @@ const ProductCard = ({ title, image, price, id_product }) => {
     .then((res) => res.data)
     .catch((err) => console.log(err.message));
     setCreateList(false);
+    setRefreshList(false);
+    setCreatedList(true);
   }
 
   useEffect(() => {
@@ -66,8 +71,8 @@ const ProductCard = ({ title, image, price, id_product }) => {
   useEffect(() => {
     axios.get(`https://manomano-hackathon.herokuapp.com/api/lists`)
     .then((res) => res.data)
-    .then((data) => setWishlists(data))
-  }, [createList, wishlistSelect])
+    .then((data) => {setWishlists(data); setCreatedList(false)})
+  }, [createList, wishlistSelect, createdList])
 
   return (
     <div className="extend">
@@ -123,15 +128,16 @@ const ProductCard = ({ title, image, price, id_product }) => {
                   <li className="extend__list-div__ul__create-li">
                     {!createList ? (<button 
                     className="extend__list-div__ul__create-li__button"
-                    onClick={() => setCreateList(!createList)}>
+                    onClick={() => setCreateList(true)}>
                       Create a new wishlist +
                     </button>) : (<form>
                       <input
                       className="input-create"
                       onChange={(e) => setListName(e.target.value)}
-                      placeholder="Please enter a list name">
+                      placeholder="Please enter a list name"
+                      autoFocus>
                       </input>
-                      <button className="ok-button" onClick={(e) => handleCreateList(e)}>👌</button></form>)}
+                      <button className="ok-button" onClick={(e) => {setRefreshList(true); handleCreateList(e)}}>👌</button></form>)}
                   </li>
                   {wishlists.length ? <li className="extend__list-div__ul__list-li__mywishlists"><p>{`My wishlist${wishlists.length > 1 ? "s" : ""}`}</p></li> : <li className="extend__list-div__ul__list-li__no-list">You don't have any wishlist yet</li>}
                   {wishlists && wishlists.map((list, index) =>

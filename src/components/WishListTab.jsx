@@ -1,8 +1,22 @@
 import { useState, useEffect, useRef } from "react";
+import {RiDeleteBin6Line} from 'react-icons/ri';
+import axios from "axios";
 
-const WishListTab = ({ activate, name, id, setTodisplay }) => {
+const WishListTab = ({ activate, name, id, setTodisplay, setListDeleted, setRefreshList }) => {
   const [active, setActive] = useState(false);
   const tabRef = useRef();
+
+  const handleDeleteList = () => {
+    id && axios.delete(
+      `https://manomano-hackathon.herokuapp.com/api/lists/${id}`,
+      {
+        method: "DELETE",
+        withCredentials: false,
+      }
+    );
+    setRefreshList(false);
+    setListDeleted(true);
+  };
 
   useEffect(() => {
     const checkIfClickedOutside = e => {
@@ -26,15 +40,20 @@ const WishListTab = ({ activate, name, id, setTodisplay }) => {
   }, [active]);
 
   return (
-    <div
-      className={active ? "wishlisttab active" : "wishlisttab"}
-      ref={tabRef}
-      onClick={() => {
-        setActive(!active);
-        setTodisplay(id);
-      }}
-    >
-      {name}
+    <div className="wishlisttab">
+      <div
+        className={active ? "wishlisttab__tab active" : "wishlisttab__tab"}
+        ref={tabRef}
+        onClick={() => {
+          setActive(!active);
+          setTodisplay(id);
+        }}
+      >
+        {name}
+      </div>
+      <div className="wishlisttab__trash-div"  onClick={() => {setRefreshList(true); handleDeleteList()}}>
+        <RiDeleteBin6Line className='wishlisttab__trash-div__icon' title="Delete this list" />
+      </div>
     </div>
   );
 };

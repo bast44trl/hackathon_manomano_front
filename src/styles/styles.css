@@ -213,7 +213,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 3vw;
+  height: 2.5vw;
   width: 100%;
   overflow: hidden;
 }
@@ -221,12 +221,12 @@
 .extend__product-card__content__price-favorite__price {
   font-weight: bold;
   color: #0c193a;
-  font-size: 2.2vw;
+  font-size: 1.5vw;
   height: 100%;
 }
 
 .extend__product-card__content__price-favorite__favorite-purchased {
-  width: 5vw;
+  width: 4.5vw;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,7 +244,7 @@
 }
 
 .extend__product-card__content__price-favorite__favorite-purchased__favorite {
-  width: 2vw;
+  width: 1.6vw;
   height: 70%;
 }
 
@@ -275,7 +275,7 @@
 
 .extend__product-card__content__price-favorite__favorite-purchased__purchased__icon {
   width: 100%;
-  font-size: 2vw;
+  font-size: 1.6vw;
   color: #4aaea1;
 }
 
@@ -416,7 +416,18 @@
 }
 
 .wishlisttab {
-  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wishlisttab__tab {
   -webkit-box-shadow: 1px 1px 3px black;
           box-shadow: 1px 1px 3px black;
   border-radius: 0 5px 5px 0;
@@ -438,7 +449,24 @@
           justify-content: center;
 }
 
-.wishlisttab:hover {
+.wishlisttab__tab:hover {
+  cursor: pointer;
+}
+
+.wishlisttab__trash-div {
+  padding-left: 1vw;
+}
+
+.wishlisttab__trash-div__icon {
+  font-size: 2vw;
+  opacity: 0.5;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.wishlisttab__trash-div__icon:hover {
+  color: #ce3535;
+  opacity: 1;
   cursor: pointer;
 }
 
