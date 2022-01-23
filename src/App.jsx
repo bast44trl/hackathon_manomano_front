@@ -1,10 +1,11 @@
-import "./App.css";
-import backgroundLandingPage from "./assets/backgrounds/landing-page.png";
+import Products from "./components/Products";
+
+import "./styles/_App.scss";
 
 function App() {
   return (
     <div className="App">
-      <img src={backgroundLandingPage} alt="background de mano mano" />
+      <Products/>
     </div>
   );
 }

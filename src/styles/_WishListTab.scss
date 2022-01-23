@@ -1,0 +1,29 @@
+.wishlisttab {
+  background-color: white;
+  box-shadow: 1px 1px 3px black;
+  border-radius: 0 5px 5px 0;
+  width: 20vw;
+  height: 5vw;
+  font-size: 1.1rem;
+  font-family: $main-font-family;
+  margin-left: 15px;
+  margin-bottom: 8px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.active {
+  border-style: solid;
+
+  border-width: 0px 0px 0px 3px;
+  border-color: grey grey grey #29b9ad;
+}
+
+#myfav {
+  margin-bottom: 45px;
+}
