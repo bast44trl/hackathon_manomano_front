@@ -11,7 +11,7 @@ const WishlistPage = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/lists")
+      .get("https://manomano-hackathon.herokuapp.com/api/lists")
       .then((res) => res.data)
       .then((data) => setLists(data));
   }, []);

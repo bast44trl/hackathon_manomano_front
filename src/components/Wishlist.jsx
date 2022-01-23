@@ -9,14 +9,14 @@ const Wishlist = ({ toDisplay }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/lists_products/${toDisplay}`)
+      .get(`https://manomano-hackathon.herokuapp.com/api/lists_products/${toDisplay}`)
       .then((res) => res.data)
       .then((data) => setFavorites(data));
   }, [toDisplay, isActive]);
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/lists_products/${toDisplay}`)
+      .get(`https://manomano-hackathon.herokuapp.com/api/lists_products/${toDisplay}`)
       .then((res) => res.data)
       .then((data) => {setFavorites(data); setDeleteOk(false)});
   }, [deleteOk]);

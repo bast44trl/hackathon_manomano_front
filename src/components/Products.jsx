@@ -10,7 +10,7 @@ const Products = () => {
   
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/products`)
+      .get(`https://manomano-hackathon.herokuapp.com/api/products`)
       .then((rep) => rep.data)
       .then((data) => setProducts(data));
   }, []);

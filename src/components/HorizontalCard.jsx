@@ -13,7 +13,7 @@ const HorizontalCard = ({
 }) => {
   const handleDeleteProduct = (id_list, id_product) => {
     axios.delete(
-      `http://localhost:8000/api/lists_products/${id_list}&${id_product}`,
+      `https://manomano-hackathon.herokuapp.com/api/lists_products/${id_list}&${id_product}`,
       {
         method: "DELETE",
         withCredentials: false,

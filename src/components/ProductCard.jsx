@@ -45,7 +45,7 @@ const ProductCard = ({ title, image, price, id_product }) => {
 
   const handleCreateList = (e) => {
     e.preventDefault();
-    axios.post(`http://localhost:8000/api/lists`, {id_user: 1, name: listName}, {
+    axios.post(`https://manomano-hackathon.herokuapp.com/api/lists`, {id_user: 1, name: listName}, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -58,13 +58,13 @@ const ProductCard = ({ title, image, price, id_product }) => {
   }
 
   useEffect(() => {
-    id_product && axios.get(`http://localhost:8000/api/lists_products/products/${id_product}`)
+    id_product && axios.get(`https://manomano-hackathon.herokuapp.com/api/lists_products/products/${id_product}`)
     .then((res) => res.data)
     .then((data) => data.length ? setFavoriteActive(true) : "")
   }, [])
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/lists`)
+    axios.get(`https://manomano-hackathon.herokuapp.com/api/lists`)
     .then((res) => res.data)
     .then((data) => setWishlists(data))
   }, [createList, wishlistSelect])
