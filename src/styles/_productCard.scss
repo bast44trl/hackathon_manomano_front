@@ -133,24 +133,24 @@
       &__price-favorite {
         display: flex;
         justify-content: space-between;
-        height: 3vw;
+        height: 2.5vw;
         width: 100%;
         overflow: hidden;
         &__price {
           font-weight: bold;
           color: $main-text-color;
-          font-size: 2.2vw;
+          font-size: 1.5vw;
           height: 100%;
         }
         &__favorite-purchased {
-          width: 5vw;
+          width: 4.5vw;
           height: 100%;
           display: flex;
           flex-direction: row-reverse;
           justify-content: space-between;
           align-items: center;
           &__favorite {
-            width: 2vw;
+            width: 1.6vw;
             height: 70%;
             & img {
               width: 100%;
@@ -175,7 +175,7 @@
             height: 70%;
             &__icon {
               width: 100%;
-              font-size: 2vw;
+              font-size: 1.6vw;
               color: #4aaea1;
             }
           }

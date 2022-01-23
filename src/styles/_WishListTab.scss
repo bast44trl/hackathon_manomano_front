@@ -1,19 +1,36 @@
 .wishlisttab {
-  background-color: white;
-  box-shadow: 1px 1px 3px black;
-  border-radius: 0 5px 5px 0;
-  width: 20vw;
-  height: 5vw;
-  font-size: 1.1rem;
-  font-family: $main-font-family;
-  margin-left: 15px;
-  margin-bottom: 8px;
-  text-align: center;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  &:hover {
-    cursor: pointer;
+  &__tab {
+    box-shadow: 1px 1px 3px black;
+    border-radius: 0 5px 5px 0;
+    width: 20vw;
+    height: 5vw;
+    font-size: 1.1rem;
+    font-family: $main-font-family;
+    margin-left: 15px;
+    margin-bottom: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__trash-div {
+    padding-left: 1vw;
+    &__icon {
+      font-size: 2vw;
+      opacity: 0.5;
+      transition: color 0.3s;
+      &:hover {
+        color: #ce3535;
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
   }
 }
 
