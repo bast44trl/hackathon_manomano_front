@@ -1,6 +1,7 @@
 .wishlisttab {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   align-items: center;
   &__tab {
     box-shadow: 1px 1px 3px black;
@@ -20,7 +21,6 @@
     }
   }
   &__trash-div {
-    padding-left: 1vw;
     &__icon {
       font-size: 2vw;
       opacity: 0.5;
@@ -28,6 +28,7 @@
       &:hover {
         color: #ce3535;
         opacity: 1;
+        transition: color 0.3s;
         cursor: pointer;
       }
     }

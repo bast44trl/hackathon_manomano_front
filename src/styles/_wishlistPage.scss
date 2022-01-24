@@ -1,5 +1,14 @@
 .wishlistPage {
   background-color: #fafafa;
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 1vw;
+    width: 12vw;
+    height: 7vh;
+    background-color: transparent;
+    cursor: pointer;
+  }
   &__img {
     width: 100%;
   }
