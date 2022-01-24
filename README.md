@@ -2,7 +2,7 @@
 
 48h coding!
 
-This project was to upgrade the UX on the ManoMano website on the B2C side and giving the ability to the customers to add more easily products on its wishlists.
+This project was to upgrade the UX on the B2C ManoMano website so we wanted to give the ability to customers to more easily add products on its wishlists.
 
 ### Getting started with our repos
 
@@ -16,4 +16,4 @@ You need to source our db-reset.sql in order to create the database and to confi
 
 Runs the app in the development mode.\
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000] to view it in your browser.

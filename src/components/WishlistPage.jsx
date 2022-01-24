@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import wishlisthead from "../assets/backgrounds/header_ManoMano3.png";
 import wishlistfooter from "../assets/backgrounds/footer_ManoMano3.png";
 import Wishlist from "./Wishlist";
@@ -27,6 +28,9 @@ const WishlistPage = () => {
   
   return (
     <div className="wishlistPage">
+      <Link to={`/`}><div
+        className="wishlistPage__logo"
+      ></div></Link>
       <img className="wishlistPage__img" src={wishlisthead} alt="" />
       <div className="wishlistPage__container">
         <div className="wishlistPage__container--left">
