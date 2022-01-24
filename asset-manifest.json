@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hackathon_manomano_front/static/css/main.574fc175.css",
-    "main.js": "/hackathon_manomano_front/static/js/main.5afab144.js",
+    "main.css": "/hackathon_manomano_front/static/css/main.9904637c.css",
+    "main.js": "/hackathon_manomano_front/static/js/main.1910c6d0.js",
     "static/media/landing-page.png": "/hackathon_manomano_front/static/media/landing-page.2d2d245be7f4e0d40d95.png",
     "static/media/footer_ManoMano3.png": "/hackathon_manomano_front/static/media/footer_ManoMano3.841db739b2aae2db2594.png",
     "static/media/queenBedImg.jpg": "/hackathon_manomano_front/static/media/queenBedImg.e27b6a0c84778b1162ea.jpg",
@@ -17,11 +17,11 @@
     "static/media/chainsawImg.jpg": "/hackathon_manomano_front/static/media/chainsawImg.12c513d6292837d9696d.jpg",
     "static/media/drawerImg.jpg": "/hackathon_manomano_front/static/media/drawerImg.a7317745293c124fa4fb.jpg",
     "index.html": "/hackathon_manomano_front/index.html",
-    "main.574fc175.css.map": "/hackathon_manomano_front/static/css/main.574fc175.css.map",
-    "main.5afab144.js.map": "/hackathon_manomano_front/static/js/main.5afab144.js.map"
+    "main.9904637c.css.map": "/hackathon_manomano_front/static/css/main.9904637c.css.map",
+    "main.1910c6d0.js.map": "/hackathon_manomano_front/static/js/main.1910c6d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.574fc175.css",
-    "static/js/main.5afab144.js"
+    "static/css/main.9904637c.css",
+    "static/js/main.1910c6d0.js"
   ]
 }
