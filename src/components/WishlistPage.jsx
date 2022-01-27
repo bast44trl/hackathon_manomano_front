@@ -28,7 +28,7 @@ const WishlistPage = () => {
   
   return (
     <div className="wishlistPage">
-      <Link to={`/`}><div
+      <Link to={`/home`}><div
         className="wishlistPage__logo"
       ></div></Link>
       <img className="wishlistPage__img" src={wishlisthead} alt="" />
