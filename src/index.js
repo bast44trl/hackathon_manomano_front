@@ -8,10 +8,10 @@ import WishlistPage from "./components/WishlistPage";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="*" element={<App />} />
-        <Route path="/" element={<App />} />
+        <Route path="/home" element={<App />} />
         <Route path="/wishlist-page" element={<WishlistPage />} />
       </Routes>
     </BrowserRouter>
