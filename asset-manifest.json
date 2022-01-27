@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/hackathon_manomano/static/css/main.9904637c.css",
-    "main.js": "/hackathon_manomano/static/js/main.d055f678.js",
-    "static/media/landing-page.png": "/hackathon_manomano/static/media/landing-page.2d2d245be7f4e0d40d95.png",
-    "static/media/footer_ManoMano3.png": "/hackathon_manomano/static/media/footer_ManoMano3.841db739b2aae2db2594.png",
-    "static/media/queenBedImg.jpg": "/hackathon_manomano/static/media/queenBedImg.e27b6a0c84778b1162ea.jpg",
-    "static/media/drillImg.jpg": "/hackathon_manomano/static/media/drillImg.21dc4ff4e09a8faea24b.jpg",
-    "static/media/singleBedImg.jpg": "/hackathon_manomano/static/media/singleBedImg.d9f425813041c1437285.jpg",
-    "static/media/header_ManoMano3.png": "/hackathon_manomano/static/media/header_ManoMano3.644ee32ac4d9a3f6fccb.png",
-    "static/media/lampImg.jpg": "/hackathon_manomano/static/media/lampImg.4f7c2f6c5711622cb947.jpg",
-    "static/media/redHeart.png": "/hackathon_manomano/static/media/redHeart.da9c6af9a8950cbe673d.png",
-    "static/media/strollerImg.jpg": "/hackathon_manomano/static/media/strollerImg.662cef905c63dc0de507.jpg",
-    "static/media/tvImg.jpg": "/hackathon_manomano/static/media/tvImg.40aba580690304cbc9e2.jpg",
-    "static/media/emptyHeart.png": "/hackathon_manomano/static/media/emptyHeart.b752e88a27be526e4416.png",
-    "static/media/shelfImg.jpg": "/hackathon_manomano/static/media/shelfImg.6915d91ba790ca2c20af.jpg",
-    "static/media/chainsawImg.jpg": "/hackathon_manomano/static/media/chainsawImg.12c513d6292837d9696d.jpg",
-    "static/media/drawerImg.jpg": "/hackathon_manomano/static/media/drawerImg.a7317745293c124fa4fb.jpg",
-    "index.html": "/hackathon_manomano/index.html",
-    "main.9904637c.css.map": "/hackathon_manomano/static/css/main.9904637c.css.map",
-    "main.d055f678.js.map": "/hackathon_manomano/static/js/main.d055f678.js.map"
+    "main.css": "/hackathon_manomano_front/static/css/main.9904637c.css",
+    "main.js": "/hackathon_manomano_front/static/js/main.e04b2681.js",
+    "static/media/landing-page.png": "/hackathon_manomano_front/static/media/landing-page.2d2d245be7f4e0d40d95.png",
+    "static/media/footer_ManoMano3.png": "/hackathon_manomano_front/static/media/footer_ManoMano3.841db739b2aae2db2594.png",
+    "static/media/queenBedImg.jpg": "/hackathon_manomano_front/static/media/queenBedImg.e27b6a0c84778b1162ea.jpg",
+    "static/media/drillImg.jpg": "/hackathon_manomano_front/static/media/drillImg.21dc4ff4e09a8faea24b.jpg",
+    "static/media/singleBedImg.jpg": "/hackathon_manomano_front/static/media/singleBedImg.d9f425813041c1437285.jpg",
+    "static/media/header_ManoMano3.png": "/hackathon_manomano_front/static/media/header_ManoMano3.644ee32ac4d9a3f6fccb.png",
+    "static/media/lampImg.jpg": "/hackathon_manomano_front/static/media/lampImg.4f7c2f6c5711622cb947.jpg",
+    "static/media/redHeart.png": "/hackathon_manomano_front/static/media/redHeart.da9c6af9a8950cbe673d.png",
+    "static/media/strollerImg.jpg": "/hackathon_manomano_front/static/media/strollerImg.662cef905c63dc0de507.jpg",
+    "static/media/tvImg.jpg": "/hackathon_manomano_front/static/media/tvImg.40aba580690304cbc9e2.jpg",
+    "static/media/emptyHeart.png": "/hackathon_manomano_front/static/media/emptyHeart.b752e88a27be526e4416.png",
+    "static/media/shelfImg.jpg": "/hackathon_manomano_front/static/media/shelfImg.6915d91ba790ca2c20af.jpg",
+    "static/media/chainsawImg.jpg": "/hackathon_manomano_front/static/media/chainsawImg.12c513d6292837d9696d.jpg",
+    "static/media/drawerImg.jpg": "/hackathon_manomano_front/static/media/drawerImg.a7317745293c124fa4fb.jpg",
+    "index.html": "/hackathon_manomano_front/index.html",
+    "main.9904637c.css.map": "/hackathon_manomano_front/static/css/main.9904637c.css.map",
+    "main.e04b2681.js.map": "/hackathon_manomano_front/static/js/main.e04b2681.js.map"
   },
   "entrypoints": [
     "static/css/main.9904637c.css",
-    "static/js/main.d055f678.js"
+    "static/js/main.e04b2681.js"
   ]
 }
